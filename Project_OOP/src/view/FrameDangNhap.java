@@ -60,7 +60,6 @@ public class FrameDangNhap extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 690));
 
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(1270, 670));
 
@@ -87,7 +86,7 @@ public class FrameDangNhap extends javax.swing.JFrame {
         jLayeredPane1.add(usernameFeild);
         usernameFeild.setBounds(840, 280, 320, 30);
 
-        loginButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\letha\\Desktop\\images.jpg")); // NOI18N
+        loginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/login_1.png"))); // NOI18N
         loginButton.setBorderPainted(false);
         loginButton.setContentAreaFilled(false);
         loginButton.setHideActionText(true);
@@ -97,9 +96,9 @@ public class FrameDangNhap extends javax.swing.JFrame {
             }
         });
         jLayeredPane1.add(loginButton);
-        loginButton.setBounds(890, 430, 180, 40);
+        loginButton.setBounds(800, 430, 270, 50);
 
-        Background.setIcon(new javax.swing.ImageIcon("C:\\Users\\letha\\Desktop\\Project.jpg")); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/loginbgr.jpg"))); // NOI18N
         Background.setMinimumSize(new java.awt.Dimension(1, 1));
         jLayeredPane1.add(Background);
         Background.setBounds(0, 0, 1270, 680);

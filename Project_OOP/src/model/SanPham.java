@@ -42,7 +42,7 @@ public class SanPham {
         this.soLuong = soLuong;
     }
 
-    public SanPham(String maSanPham, String tenSanPham,String donVi, int soLuong, int giaBan) {
+    public SanPham(String maSanPham, String tenSanPham,String donVi, int giaBan , int soLuong) {
         this.maSanPham = maSanPham;
         this.tenSanPham = tenSanPham;
         this.donVi=donVi;
@@ -50,10 +50,12 @@ public class SanPham {
         this.soLuong = soLuong;
     }
 
-    public SanPham(String maSanPham, String tenSanPham, int giaBan, int soLuong) {
+    public SanPham(String maSanPham, String tenSanPham, String loaiSanPham,String donVi,int soLuong, int giaBan) {
         this.maSanPham = maSanPham;
         this.tenSanPham = tenSanPham;
+        this.loaiSanPham = loaiSanPham;
         this.giaBan = giaBan;
+        this.donVi = donVi;
         this.soLuong = soLuong;
     }
 

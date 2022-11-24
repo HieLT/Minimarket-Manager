@@ -12,7 +12,7 @@ import model.SanPham;
 import model.SanPhamQL;
 import view.FrameChiTietSanPham;
 import view.FrameNhanVien;
-import view.FrameQuanLy;
+//import view.FrameQuanLy;
 
 /**
  *
@@ -22,7 +22,7 @@ public class QuanLySanPham {
 
     JTable table;
     SanPhamQL sanPhamQL;
-    QuanLyThuChi qlThuChi;
+//    QuanLyThuChi qlThuChi;
     
     public QuanLySanPham() {
         sanPhamQL = new SanPhamQL();

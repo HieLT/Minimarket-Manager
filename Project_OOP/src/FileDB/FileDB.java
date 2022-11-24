@@ -47,7 +47,7 @@ public class FileDB {
 
     Workbook workbook, workbook1, workbook2, workbook3;
     WritableWorkbook workbook_To_Write, workbook_To_Write1, workbook_To_Write2, workbook_To_Write3;
-    File file, file1, file2, file3;
+    File file, file1, file2;
 
     public FileDB() {
         try {
@@ -74,12 +74,12 @@ public class FileDB {
 //            Logger.getLogger(FileDB.class.getName()).log(Level.SEVERE, null, ex);
 //        }
 
-        try {
-            file2 = new File("Danh Sách Thu Chi.xls");
-            workbook2 = Workbook.getWorkbook(file2);
-            getDanhSachThuChi();
-        } catch (Exception e) {
-        }
+//        try {
+//            file2 = new File("Danh Sách Thu Chi.xls");
+//            workbook2 = Workbook.getWorkbook(file2);
+//            getDanhSachThuChi();
+//        } catch (Exception e) {
+//        }
 //        } catch (IOException ex) {
 //            Logger.getLogger(FileDB.class.getName()).log(Level.SEVERE, null, ex);
 //        } catch (BiffException ex) {
@@ -87,7 +87,7 @@ public class FileDB {
 //        }
 
         try {
-            file3 = new File("Danh Sách Hóa Đơn.txt");
+            file2 = new File("Danh Sách Hóa Đơn.txt");
             getDanhSachHoaDon();
 //            for (int i= 0;i<ds_HoaDon.size();i++){
 //                System.out.println(ds_HoaDon.get(i).getDs_SanPham().size());
@@ -151,9 +151,9 @@ public class FileDB {
             int rows = sheet1.getRows();
             for (int row = 2; row < rows; row++) {
                 SanPham s = new SanPham(sheet1.getCell(1, row).getContents(), sheet1.getCell(2, row).getContents(),
-                        sheet1.getCell(3, row).getContents(), Integer.parseInt(sheet1.getCell(4, row).getContents()),
-                        Integer.parseInt(sheet1.getCell(5, row).getContents()), sheet1.getCell(6, row).getContents(),
-                        sheet1.getCell(7, row).getContents(), Integer.parseInt(sheet1.getCell(8, row).getContents()));
+                        sheet1.getCell(3, row).getContents(), Integer.parseInt(sheet1.getCell(5, row).getContents()),
+                        Integer.parseInt(sheet1.getCell(6, row).getContents()), sheet1.getCell(7, row).getContents(),
+                        sheet1.getCell(4, row).getContents(), Integer.parseInt(sheet1.getCell(8, row).getContents()));
                 ds_SanPham.add(s);
             }
         } 
@@ -290,11 +290,11 @@ public class FileDB {
 
     public void writeHoaDonToFile(HoaDon hd) throws IOException {
         //file3 = new File("Danh Sách Hóa Đơn.txt");
-        BufferedWriter bw = new BufferedWriter(new FileWriter(file3, true));
-        bw.write(hd.getMaHoaDon() + "," + hd.getNgay() + "," + hd.getTongTien() + "," + hd.getDs_SanPham().size() + ",");
+        BufferedWriter bw = new BufferedWriter(new FileWriter(file2, true));
+        bw.write(hd.getMaHoaDon() + "," + hd.getTenKhachHang() + "," + hd.getSoDienThoai() + "," + hd.getNgay() + "," + hd.getTongTien() + "," + hd.getDs_SanPham().size() +","  );
         for (int i = 0; i < hd.getDs_SanPham().size(); i++) {
             SanPham sp = hd.getDs_SanPham().get(i);
-            bw.write(sp.getMaSanPham() + "," + sp.getTenSanPham() + "," + sp.getGiaBan() + "," + sp.getSoLuong() + ",");
+            bw.write(sp.getMaSanPham() +  "," + sp.getTenSanPham() +"," + sp.getDonVi() +"," + sp.getGiaBan() + "," + sp.getSoLuong() + ",");
         }
         bw.newLine();
         bw.close();
@@ -302,29 +302,35 @@ public class FileDB {
 
     private void getDanhSachHoaDon() throws FileNotFoundException, IOException {
         ds_HoaDon.clear();
-        BufferedReader br = new BufferedReader(new FileReader(file3));
+        BufferedReader br = new BufferedReader(new FileReader(file2));
         String line = "";
         while ((line = br.readLine()) != null) {
             String[] s = line.split(",");
             String maHoaDon = s[0];
-            String ngay = s[1];
-            long tongTien = Long.parseLong(s[2]);
-            int soMatHang = Integer.parseInt(s[3]);
+            String tenKhachHang=s[1];
+            String soDienThoai=s[2];
+            String ngay = s[3];
+            long tongTien = Long.parseLong(s[4]);
+            int soMatHang = Integer.parseInt(s[5]);
             ArrayList<SanPham> listSanPhamTrongHoaDon = new ArrayList<>();
             for (int k = 0; k < soMatHang; k++) {
-                String maSP = s[4 * k + 4];
-                String tenSanPham = s[4 * k + 5];
-                int giaBan = Integer.parseInt(s[4 * k + 6]);
-                int soLuong = Integer.parseInt(s[4 * k + 7]);
-                listSanPhamTrongHoaDon.add(new SanPham(maSP, tenSanPham, giaBan, soLuong));
+                String maSP = s[5 * k + 6];
+                String tenSanPham = s[5 * k + 7];
+                String donVi = s[5 * k + 8];
+                int giaBan = Integer.parseInt(s[5 * k + 9]);
+                int soLuong = Integer.parseInt(s[5 * k + 10]);
+                listSanPhamTrongHoaDon.add(new SanPham(maSP, tenSanPham , donVi , giaBan, soLuong));
             }
-            ds_HoaDon.add(new HoaDon(maHoaDon, ngay, listSanPhamTrongHoaDon, tongTien));
+//            System.out.println(listSanPhamTrongHoaDon);
+            
+            ds_HoaDon.add(new HoaDon(maHoaDon,tenKhachHang,soDienThoai, ngay, listSanPhamTrongHoaDon,tongTien));
+// ds_HoaDon.add(new HoaDon("1", "1", listSanPhamTrongHoaDon, 1));
         }
     }
 
     public void updatedanhSachHoaDon() throws IOException {
-        file3.delete();
-        BufferedWriter bw = new BufferedWriter(new FileWriter(file3));
+        file2.delete();
+        BufferedWriter bw = new BufferedWriter(new FileWriter(file2));
         for (int i = 0; i < ds_HoaDon.size(); i++) {
             HoaDon hd = ds_HoaDon.get(i);
             bw.write(hd.getMaHoaDon() + "," + hd.getNgay() + "," + hd.getTongTien() + "," + hd.getDs_SanPham().size() + ",");
