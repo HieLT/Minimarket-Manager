@@ -40,9 +40,7 @@ public class HoaDonQL {
             SanPham sp = hd.getDs_SanPham().get(i);
             noiDung+= "Sản Phẩm: "+sp.getTenSanPham() + "\nSố Lượng: " +sp.getSoLuong()+"\n";
         }
-        FileDB.ds_ThuChi.add(new ThuChi(hd.getMaHoaDon(), hd.getTongTien(), FileDB.getCurrentDate(), "Hóa Đơn", noiDung));
         file.writeHoaDonToFile(hd);
-        file.writeThuChiToFile();
     }
     
 //    public void writeHoaDonToFile() {

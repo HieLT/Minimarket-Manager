@@ -31,7 +31,6 @@ import jxl.write.WriteException;
 import model.HoaDon;
 import model.NhanVien;
 import model.SanPham;
-import model.ThuChi;
 
 /**
  *
@@ -43,7 +42,6 @@ public class FileDB {
     public static ArrayList<NhanVien> ds_NhanVien = new ArrayList<>(); //type = 0
     public static ArrayList<SanPham> ds_SanPham = new ArrayList<>(); // type = 3
     public static ArrayList<HoaDon> ds_HoaDon = new ArrayList<>();
-    public static ArrayList<ThuChi> ds_ThuChi = new ArrayList<>();
 
     Workbook workbook, workbook1, workbook2, workbook3;
     WritableWorkbook workbook_To_Write, workbook_To_Write1, workbook_To_Write2, workbook_To_Write3;
@@ -236,58 +234,6 @@ public class FileDB {
         } catch (Exception e) {
         }
     }
-
-    public void writeThuChiToFile() {
-        file2 = new File("Danh Sách Thu Chi.xls");
-        if (file2.exists()) {
-            file2.delete();
-        }
-        try {
-            workbook_To_Write2 = Workbook.createWorkbook(file2);
-            WritableSheet sheet2 = workbook_To_Write2.createSheet("Danh Sách Thu Chi", 0);
-            sheet2.mergeCells(0, 0, 4, 0);
-            sheet2.addCell(new Label(0, 0, "Danh Sách Thu Chi", Cell(sheet2, Alignment.CENTRE)));
-            sheet2.addCell(new Label(0, 1, "STT", Cell(sheet2, jxl.format.Alignment.CENTRE)));
-            sheet2.addCell(new Label(1, 1, "Tên Thu Chi", Cell(sheet2, jxl.format.Alignment.CENTRE)));
-            sheet2.addCell(new Label(2, 1, "Loại Thu Chi", Cell(sheet2, jxl.format.Alignment.CENTRE)));
-            sheet2.addCell(new Label(3, 1, "Ngày", Cell(sheet2, jxl.format.Alignment.CENTRE)));
-            sheet2.addCell(new Label(4, 1, "Tổng Tiền", Cell(sheet2, Alignment.LEFT)));
-            sheet2.addCell(new Label(5, 1, "Nội Dung", Cell(sheet2, Alignment.LEFT)));
-            for (int i = 0; i < ds_ThuChi.size(); i++) {
-                sheet2.addCell(new jxl.write.Number(0, i + 2, i + 1, Cell(sheet2, Alignment.CENTRE)));
-                sheet2.addCell(new Label(1, i + 2, ds_ThuChi.get(i).getTenChiPhi(), Cell(sheet2, Alignment.LEFT)));
-                sheet2.addCell(new Label(2, i + 2, ds_ThuChi.get(i).getLoaichiphi(), Cell(sheet2, Alignment.LEFT)));
-                sheet2.addCell(new Label(3, i + 2, ds_ThuChi.get(i).getNgayThang(), Cell(sheet2, Alignment.LEFT)));
-                sheet2.addCell(new jxl.write.Number(4, i + 2, ds_ThuChi.get(i).getMucChiPhi(), Cell(sheet2, Alignment.LEFT)));
-                sheet2.addCell(new Label(5, i + 2, ds_ThuChi.get(i).getNoiDung(), Cell(sheet2, Alignment.LEFT)));
-            }
-            workbook_To_Write2.write();
-            workbook_To_Write2.close();
-        } catch (IOException ex) {
-            Logger.getLogger(FileDB.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (WriteException ex) {
-            Logger.getLogger(FileDB.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    private void getDanhSachThuChi() {
-        try {
-            Sheet sheet1 = workbook2.getSheet(0);
-            int cols = sheet1.getColumns();
-            int rows = sheet1.getRows();
-            ds_ThuChi.clear();
-            for (int row = 2; row < rows; row++) {
-                String tenChiPhi = sheet1.getCell(1, row).getContents();
-                String loaiChiPhi = sheet1.getCell(2, row).getContents();
-                String ngay = sheet1.getCell(3, row).getContents();
-                int tongTien = Integer.parseInt(sheet1.getCell(4, row).getContents());
-                String noiDung = sheet1.getCell(5, row).getContents();
-                ds_ThuChi.add(new ThuChi(tenChiPhi, tongTien, ngay, loaiChiPhi, noiDung));
-            }
-        } catch (Exception e) {
-        }
-    }
-
     public void writeHoaDonToFile(HoaDon hd) throws IOException {
         //file3 = new File("Danh Sách Hóa Đơn.txt");
         BufferedWriter bw = new BufferedWriter(new FileWriter(file2, true));
@@ -345,10 +291,6 @@ public class FileDB {
 
     public ArrayList<HoaDon> get_Ds_Hoa_Don() {
         return ds_HoaDon;
-    }
-
-    public ArrayList<ThuChi> get_Ds_ThuChi() {
-        return ds_ThuChi;
     }
 
     public ArrayList<NhanVien> get_Ds_NhanVien() {

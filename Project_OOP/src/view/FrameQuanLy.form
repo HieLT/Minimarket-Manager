@@ -98,7 +98,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel15" min="-2" pref="291" max="-2" attributes="0"/>
+                      <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="9" max="32767" attributes="0"/>
@@ -268,11 +268,8 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tfMaSanPham" linkSize="5" pref="200" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="tfLoaiSanPham" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
-                                          <Component id="tfThuongHieu" linkSize="5" alignment="1" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="tfLoaiSanPham" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="tfThuongHieu" linkSize="5" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -281,10 +278,11 @@
                                       <Component id="tfDonVi" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Component id="tfSoLuong" linkSize="5" alignment="1" max="32767" attributes="0"/>
                                       <Component id="tfTenSanPham" linkSize="5" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="tfMaSanPham" linkSize="5" alignment="1" pref="200" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="54" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
@@ -305,12 +303,12 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="92" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="btXoaSanPham" min="-2" pref="129" max="-2" attributes="0"/>
                                       <Component id="btThemSanPham" min="-2" pref="129" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="98" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="btThoat" min="-2" pref="129" max="-2" attributes="0"/>
                                       <Component id="btCapNhatSanPham" min="-2" pref="129" max="-2" attributes="0"/>
@@ -333,63 +331,67 @@
                                       <Component id="jLabel46" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="lblMaSanPham2" linkSize="2" alignment="1" min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="tfMaSanPham" linkSize="4" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblGiaBan2" linkSize="7" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                      <Component id="tfGiaBan" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel47" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="lblMaSanPham2" linkSize="2" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="tfMaSanPham" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lblTenSanPham2" linkSize="2" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                      <Component id="tfTenSanPham" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblTenSanPham3" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="tfLoaiSanPham" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btCapNhatSanPham" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                  <Component id="btThemSanPham" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="lblNhaCungCap2" linkSize="2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="tfThuongHieu" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="tfDonVi" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblNhaCungCap3" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="lblGiaBan2" linkSize="7" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                          <Component id="tfGiaBan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel47" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="tfTenSanPham" linkSize="4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="lblTenSanPham2" linkSize="2" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="btXoaSanPham" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="btThoat" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="btCapNhatSanPham" pref="36" max="32767" attributes="0"/>
+                                      <Component id="btThemSanPham" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="btXoaSanPham" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Component id="btThoat" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblTenSanPham3" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="tfLoaiSanPham" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblNhaCungCap2" linkSize="2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="tfThuongHieu" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="tfDonVi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblNhaCungCap3" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbsoluong" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="tfSoLuong" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1082,7 +1084,7 @@
                         </LineBorder>
                       </Border>
                       <Font PropertyName="font" name="Tahoma" size="18" style="1"/>
-                      <Color PropertyName="color" blue="33" green="33" red="ff" type="rgb"/>
+                      <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
                     </TitledBorder>
                   </Border>
                 </Property>

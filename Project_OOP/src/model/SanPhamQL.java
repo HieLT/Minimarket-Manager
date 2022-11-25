@@ -25,9 +25,7 @@ public class SanPhamQL {
     public void themSanPham(SanPham sp) {
         if (sp instanceof SanPham) FileDB.ds_SanPham.add(sp);
         long tongTien = sp.getGiaMua()*sp.getSoLuong();
-        FileDB.ds_ThuChi.add(new ThuChi(sp.getMaSanPham()+": " +sp.getTenSanPham(), tongTien, FileDB.getCurrentDate(), "Nhập Kho","Nhập Kho:\n"+"Ngày: "+FileDB.getCurrentDate()+"\nSản Phẩm: "+sp.getTenSanPham()+"\nSố Lượng: "+sp.getSoLuong()));
         file.writeSanPhamToFile();
-        file.writeThuChiToFile();
     }
 
     public void suaThongTin(SanPham sp, int i) {
