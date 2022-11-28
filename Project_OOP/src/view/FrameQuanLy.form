@@ -101,7 +101,7 @@
                       <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="9" max="32767" attributes="0"/>
+                      <EmptySpace pref="10" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -277,8 +277,8 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="tfDonVi" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Component id="tfSoLuong" linkSize="5" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="tfTenSanPham" linkSize="5" alignment="1" max="32767" attributes="0"/>
                                       <Component id="tfMaSanPham" linkSize="5" alignment="1" pref="200" max="32767" attributes="0"/>
+                                      <Component id="tfTenSanPham" linkSize="5" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -341,21 +341,18 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="lblGiaBan2" linkSize="7" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                                          <Component id="tfGiaBan" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel47" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lblGiaBan2" linkSize="7" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="tfGiaBan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel47" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="tfTenSanPham" linkSize="4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="lblTenSanPham2" linkSize="2" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="lblTenSanPham2" linkSize="2" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Component id="tfTenSanPham" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -369,7 +366,6 @@
                                       <Component id="btXoaSanPham" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                                       <Component id="btThoat" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -391,9 +387,9 @@
                                       <Component id="lbsoluong" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="tfSoLuong" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace pref="13" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1190,8 +1186,8 @@
         <Container class="javax.swing.JPanel" name="pnKhachHang">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="B&#xe1;n H&#xe0;ng">
-                <Property name="tabTitle" type="java.lang.String" value="B&#xe1;n H&#xe0;ng"/>
+              <JTabbedPaneConstraints tabName="L&#x1ecb;ch S&#x1eed;">
+                <Property name="tabTitle" type="java.lang.String" value="L&#x1ecb;ch S&#x1eed;"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icon/technology.png"/>
                 </Property>

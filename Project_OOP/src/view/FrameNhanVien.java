@@ -957,7 +957,7 @@ public class FrameNhanVien extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Sai Mã Hàng", "Thông Báo", JOptionPane.INFORMATION_MESSAGE);
             }
         }
-        tenKhachHangField.setText("");
+        tfThemMaSanPham.setText("");
         tfThemSoLuong.setText("");
     }//GEN-LAST:event_btThemVaoGioHangActionPerformed
 
@@ -1186,7 +1186,7 @@ public class FrameNhanVien extends javax.swing.JFrame {
         com.itextpdf.text.Font fontChung = new com.itextpdf.text.Font(bf1, 14, com.itextpdf.text.Font.NORMAL, BaseColor.BLACK);
         PdfPTable table = new PdfPTable(8);
         table.setWidthPercentage(100);
-        table.setWidths(new float[]{20f, 50f, 60f, 50f, 30f, 40f,60f,70f});
+        table.setWidths(new float[]{25f, 50f, 60f, 50f, 30f, 40f,60f,70f});
         table.addCell(new PdfPCell(new Paragraph("STT", fontChung)));
         table.addCell(new PdfPCell(new Paragraph("Mã Sản Phẩm", fontChung)));
         table.addCell(new PdfPCell(new Paragraph("Tên Sản Phẩm", fontChung)));
